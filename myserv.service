@@ -1,0 +1,11 @@
+[Unit]
+Description=My first service to test
+
+[Service]
+ExecStart=/home/slava/Source/ITS/ins.sh
+WorkingDirectory=/home/slava/Source/ITS
+User=slava
+Group=slava
+
+[Install]
+WantedBy=multi-user.target
