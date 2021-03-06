@@ -1,3 +1,2 @@
 #!/bin/bash
-dbus-monitor --system "sender=org.freedesktop.NetworkManager, path=/org/freedesktop/NetworkManager, member=StateChanged" | sed -u -n -e 's/uint32 70/bash connected.sh/p; s/uint32 60/bash disconnected.sh/p; s/uint32 50/bash disconnected.sh/p; s/uint32 40/bash disconnected.sh/p; s/uint32 30/bash disconnected.sh/p; s/uint32 20/bash disconnected.sh/p; s/uint32 10/bash disconnected.sh/p; s/uint32 0/bash disconnected.sh/p' | sh
-
+dbus-monitor --system "sender=org.freedesktop.NetworkManager, path=/org/freedesktop/NetworkManager, member=StateChanged" | sed -u -n -e 's/uint32 70/sudo bash connected.sh/p; s/uint32 60/sudo bash disconnected.sh/p; s/uint32 50/sudo bash disconnected.sh/p; s/uint32 40/sudo bash disconnected.sh/p; s/uint32 30/sudo bash disconnected.sh/p; s/uint32 20/sudo bash disconnected.sh/p; s/uint32 10/sudo bash disconnected.sh/p; s/uint32 0/sudo bash disconnected.sh/p' | sh
